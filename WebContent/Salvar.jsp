@@ -1,3 +1,4 @@
+<%@page import="br.com.proj.dados.MotoDB"%>
 <%@page import="br.com.proj.entidade.Moto"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -12,7 +13,7 @@
 <%
 
 int id = Integer.parseInt (request.getParameter("id"));
-String descricao = request.getParameter("descrição");
+String descricao = request.getParameter("descricao");
 int ano = Integer.parseInt (request.getParameter ("ano"));
 
 Moto moto = new Moto();
@@ -22,6 +23,14 @@ moto.setDescricao(descricao);
 moto.setAno (ano);
 
 
+MotoDB db = new MotoDB(); 
+
+if (db.insert(moto)){
+	System.out.println ("Inserido com sucesso");
+	
+}else{
+	System.out.println ("Erro!");
+}
 
 %>
 

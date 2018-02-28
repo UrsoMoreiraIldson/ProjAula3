@@ -11,7 +11,7 @@
 	<form action="Salvar.jsp">
 
 		<input type="text" name="id"> Descrição: <input type="text"
-			name="descrição"> Ano: <input type="text" name="ano">
+			name="descricao"> Ano: <input type="text" name="ano">
 
 		<input type="submit" value="Salvar">
 
