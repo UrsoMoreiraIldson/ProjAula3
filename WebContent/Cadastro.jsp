@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="Salvar.jsp">
+	<form action="Salvar.jsp" method="post">
 
 		<input type="text" name="id"> Descrição: <input type="text"
 			name="descricao"> Ano: <input type="text" name="ano">
